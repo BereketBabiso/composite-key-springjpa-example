@@ -13,7 +13,7 @@ import com.berry.jpa.domain.UserKey;
 @Repository
 public interface UserAccountRepository extends CrudRepository<UserAccount, UserKey> {
 
-  //public UserAccount findByUserKeyUserIdAndEmail(int id, String email);
+  public UserAccount findByPrimaryKeyUserIdAndPrimaryKeyEmail(int id, String email);
   
   List<UserAccount> findAll(Example<UserAccount> userKey);
 }
